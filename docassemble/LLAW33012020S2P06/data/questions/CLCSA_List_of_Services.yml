@@ -7,7 +7,7 @@ data:
     location:
       - North
     phone: 
-      - (08) 8286 6911
+      - "[(08) 8286 6911](tel:+6182866911)"
     address:
       - 26 John Street Salisbury SA 5108
     legal issue:
@@ -26,7 +26,7 @@ data:
       - North
       - Outback
     phone:
-      - (08) 8346 9009
+      - "[(08) 8346 9009](tel:+6183469009)"
     address: 
       - 212 Port Road Hindmarsh SA 5007
     legal issue:
@@ -44,7 +44,7 @@ data:
       - West
       - Mid North
     phone: 
-      - (08) 8633 3600
+      - "[(08) 8633 3600](tel:+6186333600)"
     address:
       - Flinders Arcade 72 Ellen Street Port Pirie SA 5540
     legal issue:
@@ -61,7 +61,7 @@ data:
     location: 
       - Central
     phone:
-      - 1800 615 677
+      - "[1800 615 677](tel:+61800615677)"
     address:
       - 43 Franklin Street Adelaide SA 5000
     legal issue: 
@@ -78,7 +78,7 @@ data:
     location: 
       - South
     phone: 
-      - (08) 8384 5222
+      - "[(08) 8384 5222](tel:+6183845222)"
     address: 
       - 40 Beach Road Chrisies Beach SA 5165
     legal issue:
@@ -95,7 +95,7 @@ data:
     location: 
       - Mid North
     phone: 
-      - (08) 8723 1396
+      - "[(08) 8723 1396](tel:+6187231396)"
     address:
       - 8a Commercial Street West Mount Gambier SA 5290
     legal issue:
@@ -112,7 +112,7 @@ data:
     location: 
       - South
     phone: 
-      - (08) 8582 4998 
+      - "[(08) 8582 4998](tel:+6185824998)"
     address: 
       - 9 Kay Avenue Berri SA 5343
     legal issue:
@@ -130,7 +130,7 @@ data:
       - Central
       - East
     phone:
-      - (08) 8362 1199
+      - "[(08) 8362 1199](tel:+6183621199)"
     address:
       - 110 The Parade Norwood, SA 5067
     legal issue:
@@ -148,7 +148,7 @@ data:
       - East
       - Central
     phone: 
-      - Freecall 1800 337 566 or Telephone 8359 2222
+      - Freecall "[1800 337 566](tel:+61800337566)" or Telephone "[(08) 8359 2222](tel:+6183592222)"
     address:
       - Flinders University City Campus, Level 1, 182 Victoria Square, Adelaide SA 5000
     legal issue: 
@@ -165,7 +165,8 @@ data:
     location:
       - Central
     phone: 
-      - (08) 8232 2282 (Catherine House) outreach times by appointment
+      - "[(08) 8232 2282](tel:+6182322282)" 
+      - Catherine House outreach times by appointment
     address: 
       - Hutt Street Centre, 258 Hutt Street, Adelaide SA 5000 (Outreach times: 10am-12pm Monday)
     legal issue:
@@ -182,7 +183,8 @@ data:
     location: 
       - Central
     phone: 
-      - 0401 247 224 Arvin Chang (Project Coordinator and Registered Migration Agent)
+      - "[0401 247 224](tel:+61401247224)" 
+      - Arvin Chang (Project Coordinator and Registered Migration Agent)
     address: 
       - Flinders University Building, 182 Victoria Square, Adelaide SA 5000 (by appointment only)
     legal issue: 
@@ -202,7 +204,7 @@ data:
       - West
       - Central
     phone: 
-      - (08) 8342 1800
+      - "[(08) 8342 1800](tel:+6183421800]"
     address: 
       - TBA
     legal issue: 
@@ -222,7 +224,7 @@ data:
       - West
       - Central
     phone:
-      - (08) 8313 5005
+      - "[(08) 8313 5005](tel:+6183135005)"
     address:
       - Not Available (Ring number to inquire)
     legal issue: 
@@ -246,7 +248,7 @@ data:
       - West
       - Central
     phone: 
-      - (08) 8342 1800
+      - "[(08) 8342 1800](tel:+6183421800)"
     address:
       - 43 Franklin Street, Adelaide SA 5000
     legal issue:
@@ -263,7 +265,7 @@ data:
     location:
       - Central
     phone: 
-      - (03) 8342 1800
+      - "[(03) 8342 1800](tel:+6183421800)"
     address: 
       - 43 Franklin Street, Adelaide SA 5000
     legal issue: 
@@ -284,7 +286,7 @@ data:
       - West
       - Central
     phone: 
-      - (08) 8340 9009
+      - "[(08) 8340 9009](tel:+6183409009)"
     address: 
       - 45 Grenfell Street, Adelaide SA 5000
     legal issue: 
@@ -300,7 +302,7 @@ data:
     location:
       - South
     phone: 
-      - 1300 655 037
+      - "[1300 655 037](tel:+61300655037)"
     address: 
       - Not Available (Ring number to inquire)
     legal issue:
@@ -317,9 +319,9 @@ data:
     location:
       - Mid North
     phone: 
-      - Port Augusta Office, Freecall 1800 111 052 or Telephone (08) 8641 2195
-      - Port Lincoln Office, Freecall 1800 309 912 or Telephone (08) 8683 1896
-      - Ceduna Office, Freecall 1800 839 059 or Telephone (08) 8625 3800 
+      - Port Augusta Office, Freecall "[1800 111 052](tel:+61800111052)" or Telephone "[(08) 8641 2195](tel:+6186412195)"
+      - Port Lincoln Office, Freecall "[1800 309 912](tel:+61800309912)" or Telephone "[(08) 8683 1896](tel:+6186831896)"
+      - Ceduna Office, Freecall "[1800 839 059](tel:+61800839059)" or Telephone "[(08) 8625 3800](tel:+6186253800)"
     address:
       - 26 Jervois Street Port Augusta SA 5700 
       - 56 St Andrews Terrace Port Lincoln SA 5606 
@@ -341,7 +343,8 @@ data:
       - West
       - Central
     phone: 
-      - (08) 8342 1800 or 1300 886 220 for country callers
+      - "[(08) 8342 1800](tel:+6183421800)"
+      - country callers "[1300 886 220](tel:+61300886220)"
     address:
       - Adelaide Office, 10 Pitt Street, Adelaide SA 5000
       - Unit 2 59 Main North Road, Medindie Gardens SA 5081

@@ -24,6 +24,18 @@
     background-color: rgba(255,211,0,0.5);
 }
 
+/* Navbar button */
+.nav-link{
+  font-family: Cabin, arial, sans-serif;
+  font-size: 16px;
+  margin: 3px;
+  padding: 3px;
+}
+
+.nav-item{
+  background-color: rgb(44,84,143);
+
+}
 /* Line below the navbar*/
 .navbar{
   border-bottom:8px
@@ -73,7 +85,7 @@
 /* Back button on Navbar */
 .navbar-brand{
   font-family: Cabin, arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   margin: 3px;
   padding: 3px;
 }
@@ -97,9 +109,9 @@ h1 {
 }
 
 .btn-light {
-  color: #2f8291;
+  color: #2f8291;  
 }
-
+  
 h2 {
   color:black;
 }
@@ -158,6 +170,4 @@ td{
 /* Line Height */
 li{
   line-height: 1.5;
-}
-  
 }

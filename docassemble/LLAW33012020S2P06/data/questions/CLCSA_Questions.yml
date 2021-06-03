@@ -10,13 +10,14 @@ fields:
   - no label: CLCSAlocation
     datatype: checkboxes
     choices:
-      - <b>City of Adelaide</b>: Central Adelaide CBD
-      - <b>North</b><br><ul class="a"><li>Prospect</li><li>Port Adelaide-Enfield</li><li>Salisbury</li><li>Tea Tree Gully</li><li>Playford</li></ul>: North
-      - <b>South</b><br><ul class="a"><li>Mitcham</li><li>Marion</li><li>Onkaparinga</li></ul>: South
+      - <b>North</b><br><ul class="a"><li>Elizabeth</li><li>Enfield</li><li>Ingle Farm</li><li>Mawson Lakes</li><li>Modbury</li><li>Salisbury</li><li>Smithfield</li><li>Gawler</ul>: North
+      - <b>Mid North</b><br><ul class="a"><li>Barossa</li><li>Lyndoch</li><li>Nuriootpa</li><li>Port Augusta</li><li>Port Lincoln</li><li>Port Pirie</li><li>Wakefield</li></ul>: Mid North
+      - <b>West</b><br><ul class="a"><li>Grange</li><li>Largs Bay</li><li>Port Adelaide</li><li>West Lakes</li><li>West Beach</li><li>Woodville</li></ul>: West
       - <b>East</b><br><ul class="a"><li>Burnside</li><li>Campbelltown</li><li>Norwood, Payneham & St. Peters</li></ul>: East
-      - <b>West</b><br><ul class="a"><li>West Torrens</li><li>Holdfast Bay</li><li>Charles Sturt</li></ul>: West
-      - <b>Outback</b><br><ul class="a"><li>Yankalilla</li><li>Alexandrina</li><li>Adelaide Hills</li><li>Barossa</li><li>Gawler</li></ul>: Outback
-      - <b>Mid North</b><br><ul class="a"><li>Mount Gambier</li><li>Murray Bridge</li><li>Port Augusta</li><li>Port Lincoln</li><li>Victor Harbor</li><li>Whyalla</li><li>Pirie</li></ul>: Mid North
+      - <b>South, South East and Riverland</b><br><ul class="a"><li>Aberfoyle Park</li><li>Blackwood</li><li>Christies Beach</li><li>Marion</li><li>Mitcham</li><li>Morphett Vale</li><li>Mount Gambier</li><li>Renmark</li><li>Reynella</li><li>Onkaparinga</li><li>Victor Harbour</li></ul>: South
+      - <b>Outback</b><br><ul class="a"><li>Ceduna</li><li>Coober Pedy</li><li>Flinders Ranges</li><li>Port Adelaide</li><li>Port Augusta</li><li>Port Lincoln</li><li>Port Pirie</li><li>Roxby Downs</li><li>Whyalla</li></ul>: Outback
+      - <b>City of Adelaide (Central and Hills)</b><br><ul class="a"><li>Adelaide</li><li>Burnside</li><li>Goodwood</li><li>Hahndorf</li><li>Mount Barker</li><li>North Adelaide</li><li>Prospect</li><li>Unley</li><li>Woodside</li></ul>: Central and Hills Zone
+      - <b>None</b><br><ul class="a"><li>I do not live in South Australia</li></ul>: None
     none of the above: False
 right: |
  [FILE mapfinal.png, 400px]
@@ -28,60 +29,43 @@ action buttons:
     icon: sign-out-alt
 ---
 question: What type of legal issue do you have?
-subquestion: |
-  
-  You may select more than one legal issue.
-
-fields:
-  - no label: CLCSAlegalissue
-    datatype: checkboxes
-    choices:
-      - Centrelink: Centrelink
-        image: centrelink
-      - Domestic violence: Domestic Violence
-        image: domestic violence
-      - Elder Abuse: Elder Abuse
-        image: elder
-      - Environmental: Environmental
-        image: enviromental
-      - Financial (personal debt, bankrupcy, mortgage): Financial
-        image: financial
-      - Homelessness: Homelessness
-        image: homelessness
-      - Migration (refugee visa applications): Migration
-        image: migration
-      - Mediation (neighbourhood conflicts, disputes): Mediation
-        image: mediation
-      - Other: Other
-        image: other
-    none of the above: False
-
+field: CLCSAlegalissue
+buttons:
+  - "Domestic violence": Domestic Violence
+    image: domestic violence
+  - "Family Law": Family Law
+    image: family
+  - "Centrelink": Centrelink
+    image: centrelink
+  - "Elder Abuse": Elder Abuse
+    image: elder
+  - "Environmental": Environmental
+    image: enviromental
+  - "Financial (personal debt, bankrupcy, mortgage)": Financial
+    image: financial
+  - "Homelessness": Homelessness
+    image: homelessness
+  - "Migration (refugee visa applications)": Migration
+    image: migration
+  - "Mediation (neighbourhood conflicts, disputes)": Mediation
+    image: mediation
+  - "Other": Other
+    image: other
 progress: 40
-action buttons:
-  - label: Safe Exit
-    action: http://www.bom.gov.au/sa/forecasts/adelaide.shtml
-    color: warning
-    icon: sign-out-alt
 ---
+# Gender question
 question: What is your gender?
-fields:
-  - no label: CLCSAgender
-    datatype: radio
-    choices:
-      - "Male": Male
-        image: male
-      - "Female": Female
-        image: female
-      - "Other": other
-        image: other
-
+field: CLCSAgender
+buttons:
+  - "Male": Male
+    image: male
+  - "Female": Female
+    image: female
+  - "Other": other
+    image: other
 progress: 60
-action buttons:
-  - label: Safe Exit
-    action: http://www.bom.gov.au/sa/forecasts/adelaide.shtml
-    color: warning
-    icon: sign-out-alt
 ---
+# Indigenous question
 question: Do you identify as Aboriginal or Torres Strait Islander?
 fields:
   - no label: CLCSAindigenous
@@ -103,6 +87,7 @@ images:
   male: male-symbol.png
   other: questionmark.png
   financial: financial.png
+  family: family.png
   mediation: mediation.png
   homelessness: homelessness.png
   migration: migration.png

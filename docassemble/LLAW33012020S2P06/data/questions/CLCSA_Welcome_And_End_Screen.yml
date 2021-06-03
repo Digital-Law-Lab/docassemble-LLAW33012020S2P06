@@ -18,8 +18,8 @@ metadata:
     - name: Zahraa Alwan
   organisation: Flinders University
   show login: False
-  exit url: https://www.clcsa.org.au/
-  exit label: Exit to CLCSA Website
+  exit url: http://www.bom.gov.au/sa/forecasts/adelaide.shtml
+  exit label: Exit to Forecast Website
 ---
 objects:
   - CLCSAlogo: DAStaticFile.using(filename='CLCSAlogo.jpg')
@@ -38,18 +38,18 @@ code: |
 ---
 # Welcome screen
 mandatory: true
-question: CLCSA Service Directory
+question: How to Get Help
 subquestion: |
   
-  Welcome to the Community Legal Centres South Australia (CLCSA) service directory. This application will ask a series of questions and provide you with a list of legal services.
+  Welcome to the Community Legal Centres South Australia (CLCSA) service directory. This application will ask some questions and give you a list of services.
   <hr>
   
   #### **Privacy Statement:**
-  > CLCSA aims to protect your data. Your data will not be stored. Data will be deleted at the end of the application. Data is gathered only to create a list of services for you. 
+  > Your data will not be stored. Data will be deleted at the end of the application. Data is gathered to find services for you. 
   <hr>
   
   #### **Disclaimer:**
-  > A safe exit button is provided to you in case you need an emergency exit from the website. This is displayed in yellow in the question screens. The 'I do not agree' button will also direct you to a safe website.
+  > A safe exit button is provided in case you need an emergency exit from the website. This is displayed in yellow in the question screens.
   
   > This application should not be used as professional legal advice.
   
@@ -59,7 +59,7 @@ subquestion: |
   
 buttons:  
   - I agree: continue
-  - I do not agree: exit
+  - No thanks: exit
     url: http://www.bom.gov.au/sa/forecasts/adelaide.shtml
     
 ---
@@ -81,19 +81,19 @@ subquestion: |
   % if len(CLCSAdisplay_specific_gender) > 0:
   #### Gender-specific services:
   
-  ${CLCSAdisplay_gender_list}
+  ${CLCSAdisplay_gender_list['display_record'].show()}
   %endif
   
   % if len(CLCSAdisplay_indigenous) > 0:
   #### Services for Aboriginal and Torres Strait Islander people:
   
-  ${CLCSAdisplay_indigenous_list}
+  ${CLCSAdisplay_indigenous_list['display_record'].show()}
   % endif
   
   % if len(CLCSAdisplay_leftovers) > 0:
   #### General Services:
   
-  ${CLCSAdisplay_leftover_list}
+  ${CLCSAdisplay_leftover_list['display_record'].show()}
   % endif
   
 progress: 100
@@ -102,7 +102,15 @@ buttons:
     url: http://www.bom.gov.au/sa/forecasts/adelaide.shtml
   - Restart: restart
 ---  
-# Table Block
+# This is meant to be a a template for the list of services - need to check if works
+template: CLCSA_Services[i]['display_record']
+content: |
+  **[${ CLCSA_Services[i].item('name') }]**  
+  ${ CLCSA_Services[i].item('address') }[BR]
+  ${ CLCSA_Services[i].item('phone') }[BR]
+  ${ CLCSA_Services[i].item('legal issue') }[BR]
+---
+# Table Block for Gender
 table: CLCSAdisplay_gender_list
 rows: CLCSAdisplay_specific_gender
 columns:
@@ -115,6 +123,7 @@ columns:
   - This service specialises in: |
       row_item['display legal issue']
 ---
+# Table block for Indigenous list
 table: CLCSAdisplay_indigenous_list
 rows: CLCSAdisplay_indigenous
 columns:
@@ -127,6 +136,7 @@ columns:
   - This service specialises in: |
       row_item['display legal issue']
 ---
+# Table block for leftover list
 table: CLCSAdisplay_leftover_list
 rows: CLCSAdisplay_leftovers
 columns:
