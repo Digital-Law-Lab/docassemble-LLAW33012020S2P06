@@ -30,7 +30,7 @@ metadata:
   exit label: Exit to CLCSA Website
 ---
 objects:
-  - CLCSAlogo: DAStaticFile.using(filename='CLCSAlogo.jpg')
+  - CLCSAlogo: DAStaticFile.using(filename='CLCSA_logo.png')
 ---
 features:
   css:
