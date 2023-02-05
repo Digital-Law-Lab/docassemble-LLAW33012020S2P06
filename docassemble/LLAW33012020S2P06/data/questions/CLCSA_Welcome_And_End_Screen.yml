@@ -37,7 +37,7 @@ features:
     - CLCSA_CSS_Website.css
     - custom-f2ddd4f8.css
   javascript:
-    - https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js
+    - custom-f2ddd3f2.js
   debug: False
   hide standard menu: True
   progress bar: True
