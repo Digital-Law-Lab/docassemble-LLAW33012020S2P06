@@ -33,7 +33,11 @@ objects:
   - CLCSAlogo: DAStaticFile.using(filename='CLCSAlogo.jpg')
 ---
 features:
-  css: CLCSA_CSS_Website.css
+  css:
+    - CLCSA_CSS_Website.css
+    - custom-f2ddd4f8.css
+  javascript:
+    - https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js
   debug: False
   hide standard menu: True
   progress bar: True
@@ -42,7 +46,7 @@ features:
 ---
 mandatory: True
 code: |
-  set_parts(logo='<img src="' + CLCSAlogo.url_for() + '" style="height: 156px;">')
+  set_parts(logo='<img src="' + CLCSAlogo.url_for() + '" style="height: 60px;">')
 ---
 # Welcome screen
 mandatory: true
