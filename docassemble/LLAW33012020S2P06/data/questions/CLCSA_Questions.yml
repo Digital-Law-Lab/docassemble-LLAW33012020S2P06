@@ -32,9 +32,9 @@ subquestion: |
 
   You may select more than one legal issue.
 
-  <div id="tailwindApp"><div id="legalIssueOptions" x-init="getItems()" x-data="{items: [],  getItems() {let _optList = []; $('.da-field-checkboxes label').each(function() {  _optList.push({ label: $(this).find('span.labelauty-unchecked')[0].innerText.trim(), img: $(this).find('span.labelauty-unchecked > img')[0].src, index: index, }); }); this.items = _optList; } }">
+  <div id="tailwindApp"><div id="legalIssueOptions" x-data="boxMultiSelect" >
     <template x-for="item in items" :key="item.index">
-        <div id="legalIssueItem" x-data="{selected:false}" :class="{selected:selected}" @click="selected = !selected" :data-original-index="item.index">
+        <div id="legalIssueItem" x-data="{selected:false}" :class="{selected:selected}" @click="selected = !selected; checkOrigin(item.index)" :data-original-index="item.index">
           <div id="legalIssueItemImg"><img x-init="replaceImgToSvg($el)" :src="item.img"></div>
           <div id="legalIssueItemLabel" x-text="item.label"></div>
         </div>
