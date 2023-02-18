@@ -164,14 +164,18 @@ li {
 }
 
 footer.dafooter {
-  height: 85px !important;
+  height: 120px !important;
+  background-color: inherit !important;
 }
 footer.dafooter > div.container {
   height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 body.da-pad-for-footer {
-  margin-bottom: 80px !important;
+  margin-bottom: 120px !important;
 }
 
 @media only screen and (max-width: 340px) {
