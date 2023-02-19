@@ -5,6 +5,20 @@ subquestion: |
   Please select the location or locations that you are looking for services in.
 
   You may select more than one location.
+  <div x-data="searchCheckboxes">
+        <div
+          class="da-form-group row da-field-container da-field-container-datatype-text"
+        >
+            <input
+              alt="search box"
+              class="form-control"
+              type="text"
+              id="suburb_search_box"
+              placeholder="Search"
+              x-model="searchTerm"
+            />
+        </div>
+      </div>
 
 fields:
   - no label: CLCSAlocation

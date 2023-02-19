@@ -7,6 +7,23 @@ $('head').append(
 
 // don't run until Alpine has loaded and is starting to initialise
 document.addEventListener('alpine:init', () => {
+  Alpine.data('searchCheckboxes', () => ({
+    searchTerm: '',
+    init() {
+      this.$watch('searchTerm', (v) => {
+        document
+          .querySelectorAll('.da-field-checkboxes > label')
+          .forEach((e) => {
+            if (e.innerText.toLowerCase().includes(v.toLowerCase())) {
+              e.style.display = 'block';
+            } else {
+              e.style.display = 'none';
+            }
+          });
+      });
+    },
+  }));
+
   Alpine.data('boxMultiSelect', () => ({
     items: [],
 
@@ -39,16 +56,18 @@ document.addEventListener('alpine:init', () => {
     },
     replaceImgToSvg(el) {
       // DA loads svg files in img tag not svg, thus, get src and make a get request and replace img with actual svg element. this is needed to manipulate the colour when the background is dark
-      $.get(
-        el.src,
-        function (data, status) {
-          if (status == 'success') {
-            let svgEl = $(data).find('svg');
-            el.replaceWith(svgEl[0]);
-          }
-        },
-        'xml'
-      );
+      setTimeout(() => {
+        $.get(
+          el.src,
+          function (data, status) {
+            if (status == 'success') {
+              let svgEl = $(data).find('svg');
+              el.replaceWith(svgEl[0]);
+            }
+          },
+          'xml'
+        );
+      }, 0);
     },
   }));
 });
